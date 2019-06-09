@@ -2,13 +2,19 @@
 
 ## Why use this buildpack
 
-The default installation of ImageMagick is older v6+, whereas modern ImageMagick is v7+.
+Cloud Foundry base stack `cflinuxfs3` includes legacy ImageMagick v6+, whereas modern ImageMagick is v7+.
 
 ```plain
 $ cf ssh myapp
 # convert -version
 Version: ImageMagick 6.9.7-4 Q16 x86_64 20170114 http://www.imagemagick.org
 ```
+
+## Why not use this buildpack
+
+Some language bindings do not yet support ImageMagick v7, such as:
+
+* Ruby [`rmagick`](https://github.com/rmagick/rmagick) - [estimated support for ImageMagick7 Summer 2019](https://github.com/rmagick/rmagick/issues/256)
 
 ## Buildpack User Documentation
 
