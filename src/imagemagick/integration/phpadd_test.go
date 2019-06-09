@@ -9,7 +9,7 @@ import (
 	. "github.com/onsi/gomega"
 )
 
-var _ = Describe("Simple Integration Test", func() {
+var _ = Describe("PHP App Integration Test", func() {
 	var app *cutlass.App
 	AfterEach(func() {
 		if app != nil {
@@ -18,11 +18,10 @@ var _ = Describe("Simple Integration Test", func() {
 		app = nil
 	})
 
-	// TODO This test is pending because it currently fails. It is just an example
-	PIt("app deploys", func() {
+	It("app deploys", func() {
 		app = cutlass.New(filepath.Join(bpDir, "fixtures", "simple_test"))
-		app.Buildpacks = []string{"imagemagick_buildpack"}
+		app.Buildpacks = []string{"imagemagick_buildpack", "php_buildpack"}
 		PushAppAndConfirm(app)
-		Expect(app.GetBody("/")).To(ContainSubstring("Something on your website"))
+		Expect(app.GetBody("/")).To(ContainSubstring("Version: ImageMagick 7."))
 	})
 })
