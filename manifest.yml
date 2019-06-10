@@ -1,5 +1,5 @@
 ---
-language: ImageMagick
+language: imagemagick
 default_versions:
 - name: ImageMagick
   version: 7.0.8-49
