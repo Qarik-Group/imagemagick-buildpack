@@ -55,7 +55,7 @@ To build this buildpack, run the following command from the buildpack's director
 1. Build the buildpack
 
     ```bash
-    buildpack-packager build
+    buildpack-packager build -stack cflinuxfs3 -cached
     ```
 
 1. Use in Cloud Foundry
@@ -63,8 +63,8 @@ To build this buildpack, run the following command from the buildpack's director
     Upload the buildpack to your Cloud Foundry and optionally specify it by name
 
     ```bash
-    cf create-buildpack [BUILDPACK_NAME] [BUILDPACK_ZIP_FILE_PATH] 1
-    cf push my_app [-b BUILDPACK_NAME]
+    cf create-buildpack imagemagick_buildpack imagemagick_buildpack*.zip 100
+    cf push phpapp -b imagemagick_buildpack -b php_buildpack -p fixtures/phpapp
     ```
 
 ### Testing
@@ -81,16 +81,17 @@ To test this buildpack, run the following command from the buildpack's directory
 
     To simplify the process in the future, install [direnv](https://direnv.net/) which will automatically source .envrc when you change directories.
 
-1. Run unit tests
-
-    ```bash
-    ./scripts/unit.sh
-    ```
-
 1. Run integration tests
 
     ```bash
     ./scripts/integration.sh
+    ```
+
+    To run integration tests against CFDev:
+
+    ```bash
+    cf login -a https://api.dev.cfdev.sh --skip-ssl-validation -u admin -p admin
+    CUTLASS_SCHEMA=https CUTLASS_SKIP_TLS_VERIFY=true ./scripts/integration.sh
     ```
 
     More information can be found on Github [cutlass](https://github.com/cloudfoundry/libbuildpack/cutlass).
