@@ -5,5 +5,5 @@ applications:
   memory: 128M
   stack: cflinuxfs3
   buildpacks:
-  # - imagemagick_buildpack
+  - imagemagick_buildpack
   - php_buildpack

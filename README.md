@@ -1,13 +1,29 @@
-# ImageMagick buildpack for Cloud Foundry
+# ImageMagick 7 buildpack for Cloud Foundry
 
 ## Why use this buildpack
 
 Cloud Foundry base stack `cflinuxfs3` includes legacy ImageMagick v6+, whereas modern ImageMagick is v7+.
 
+Without this buildpack you will see ImageMagick 6.9.7 or so:
+
 ```plain
 $ cf ssh myapp
+# /tmp/lifecycle/shell
 # convert -version
 Version: ImageMagick 6.9.7-4 Q16 x86_64 20170114 http://www.imagemagick.org
+```
+
+With this buildpack you will see ImageMagick 7.0.8 or higher:
+
+```plain
+$ cf ssh phpapp
+# /tmp/lifecycle/shell
+# convert -version
+Version: ImageMagick 7.0.8-49 Q16 x86_64 2019-06-10 https://imagemagick.org
+Copyright: © 1999-2019 ImageMagick Studio LLC
+License: https://imagemagick.org/script/license.php
+Features: Cipher DPC HDRI OpenMP(4.5)
+Delegates (built-in): bzlib djvu fontconfig freetype jbig jng jpeg lcms lqr lzma openexr png tiff wmf x xml zlib
 ```
 
 ## Why not use this buildpack
