@@ -19,8 +19,8 @@ var _ = Describe("PHP App Integration Test", func() {
 	})
 
 	It("app deploys", func() {
-		app = cutlass.New(filepath.Join(bpDir, "fixtures", "simple_test"))
-		app.Buildpacks = []string{"imagemagick_buildpack", "php_buildpack"}
+		app = cutlass.New(filepath.Join(bpDir, "fixtures", "phpapp"))
+		app.Buildpacks = []string{"ImageMagick_buildpack", "php_buildpack"}
 		PushAppAndConfirm(app)
 		Expect(app.GetBody("/")).To(ContainSubstring("Version: ImageMagick 7."))
 	})

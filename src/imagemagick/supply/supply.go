@@ -41,9 +41,15 @@ type Supplier struct {
 }
 
 func (s *Supplier) Run() error {
-	s.Log.BeginStep("Supplying imagemagick")
+	s.Log.BeginStep("Supplying ImageMagick")
 
-	// TODO: Install any dependencies here...
+	freetds, err := s.Manifest.DefaultVersion("ImageMagick")
+	if err != nil {
+		return err
+	}
+	if err := s.Installer.InstallDependency(freetds, s.Stager.DepDir()); err != nil {
+		return err
+	}
 
 	return nil
 }
