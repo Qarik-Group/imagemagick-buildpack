@@ -89,7 +89,7 @@ jobs:
       - name: blobs
       - name: pushme
       run:
-        path: (( concat "./git/scripts/ImageMagick/compile.sh" ))
+        path: "./git/scripts/ImageMagick/compile.sh"
       params:
         LIBRARY: (( grab meta.name ))
         VERSION_REGEX: ImageMagick-(.*).tar.gz
