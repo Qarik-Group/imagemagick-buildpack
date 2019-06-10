@@ -43,7 +43,7 @@ rm -rf $LIBRARY-*/
 SRC_ARCHIVE=$(ls $SRC_DIR/*.tar.gz)
 tar xfz $SRC_ARCHIVE
 pushd */
-./configure --prefix=${TMP_BUILD_DIR} --with-modules --enable-shared --with-perl
+./configure --prefix=${TMP_BUILD_DIR} --with-modules --enable-shared
 make
 make install
 popd
