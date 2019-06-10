@@ -19,6 +19,8 @@ docker run -ti \
   -e REPO_OUT=/imagemagick-output/pushme \
   -e "GIT_NAME=$(git config user.name)" \
   -e "GIT_EMAIL=$(git config user.email)" \
+  -e "S3_BUCKET=imagemagick-buildpack" \
+  -e "S3_REGION=us-east-2" \
   cloudfoundry/cflinuxfs3 \
   /buildpack/scripts/ImageMagick/compile.sh
 ```
@@ -51,7 +53,7 @@ pre_package: scripts/build.sh
 dependencies:
 - name: ImageMagick
   version: 7.0.8-49
-  uri: https://ImageMagick-buildpack.s3.us-east-2.amazonaws.com/blobs/ImageMagick/ImageMagick-compiled-7.0.8-49.tgz
+  uri: https://imagemagick-buildpack.s3.us-east-2.amazonaws.com/blobs/ImageMagick/ImageMagick-compiled-7.0.8-49.tgz
   sha256: 0ee2bb83eefa717142d56b38b85ca5815bcf8fdef1ad1b078331a65c629c5588
   cf_stacks:
   - cflinuxfs3
