@@ -68,6 +68,7 @@ dependency_deprecation_dates: []
 include_files:
   - README.md
   - VERSION
+  - bin/detect
   - bin/supply
   - manifest.yml
 pre_package: scripts/build.sh
