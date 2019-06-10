@@ -39,7 +39,7 @@ mkdir -p $TMP_SRC_DIR
 pushd $TMP_SRC_DIR
 rm -rf $LIBRARY-*/
 
-SRC_ARCHIVE=$(ls $SRC_DIR/$LIBRARY*)
+SRC_ARCHIVE=$(ls $SRC_DIR/*.tar.gz)
 tar xfz $SRC_ARCHIVE
 pushd *$LIBRARY*/
 ./configure --prefix=${TMP_BUILD_DIR}

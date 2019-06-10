@@ -74,6 +74,9 @@ jobs:
     - get: git
     - get: imagemagick
       trigger: true
+      params:
+        include_source_tarball: true
+        globs: ['x']
   - task: build
     config:
       platform: linux
@@ -92,7 +95,7 @@ jobs:
         path: "./git/scripts/ImageMagick/compile.sh"
       params:
         LIBRARY: (( grab meta.name ))
-        VERSION_REGEX: ImageMagick-(.*).tar.gz
+        VERSION_FROM: imagemagick/version
         SRC_DIR: (( grab meta.name ))
         OUTPUT_BLOBS_DIR: blobs
         REPO_OUT: pushme
