@@ -4,6 +4,7 @@ set -eu
 
 LIBRARY_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 LIBRARY=${LIBRARY:-$(basename $LIBRARY_DIR)}
+BUILDPACK_NAME=${BUILDPACK_NAME:-$LIBRARY}
 echo "Compiling $LIBRARY"
 
 ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
@@ -59,7 +60,7 @@ sha=$(sha256sum $OUTPUT_BLOBS_DIR/$LIBRARY-compiled-${VERSION}.tgz | awk '{print
 git clone $ROOT_DIR $REPO_OUT
 cat > $REPO_OUT/manifest.yml <<YAML
 ---
-language: $LIBRARY
+language: $BUILDPACK_NAME
 default_versions:
 - name: $LIBRARY
   version: $VERSION

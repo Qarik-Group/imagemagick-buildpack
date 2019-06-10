@@ -94,6 +94,7 @@ jobs:
       run:
         path: "./git/scripts/ImageMagick/compile.sh"
       params:
+        BUILDPACK_NAME: (( grab meta.name ))
         VERSION_FROM: imagemagick/version
         SRC_DIR: (( grab meta.name ))
         OUTPUT_BLOBS_DIR: blobs
