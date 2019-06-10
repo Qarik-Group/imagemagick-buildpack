@@ -41,7 +41,7 @@ rm -rf $LIBRARY-*/
 
 SRC_ARCHIVE=$(ls $SRC_DIR/*.tar.gz)
 tar xfz $SRC_ARCHIVE
-pushd *$LIBRARY*/
+pushd */
 ./configure --prefix=${TMP_BUILD_DIR}
 make
 make install
