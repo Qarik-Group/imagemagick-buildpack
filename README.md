@@ -32,6 +32,10 @@ Some language bindings do not yet support ImageMagick v7, such as:
 
 * Ruby [`rmagick`](https://github.com/rmagick/rmagick) - [estimated support for ImageMagick7 Summer 2019](https://github.com/rmagick/rmagick/issues/256)
 
+## Updates via CI
+
+A new version of this buildpack will be automatically published for each new ImageMagick release from our [CI pipeline](https://ci2.starkandwayne.com/teams/cfcommunity/pipelines/imagemagick-buildpack).
+
 ## Buildpack User Documentation
 
 ### Building the Buildpack
