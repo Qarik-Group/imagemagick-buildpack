@@ -120,7 +120,11 @@ jobs:
   - do:
     - get: git
       passed: [imagemagick]
-      trigger: false
+    - get: imagemagick
+      passed: [imagemagick]
+      trigger: true
+      params:
+        globs: ['x']
     - task: release
       config:
         platform: linux
