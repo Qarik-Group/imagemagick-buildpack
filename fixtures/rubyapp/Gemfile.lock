@@ -1,0 +1,30 @@
+GIT
+  remote: https://github.com/drnic/minimagick.git
+  revision: 4fc075f69c95c7fa79ad602251d1117e2874f167
+  branch: prioritize-imagemagick7
+  specs:
+    mini_magick (4.9.3)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    mustermann (1.0.3)
+    rack (2.0.7)
+    rack-protection (2.0.5)
+      rack
+    sinatra (2.0.5)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.5)
+      tilt (~> 2.0)
+    tilt (2.0.9)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mini_magick!
+  sinatra
+
+BUNDLED WITH
+   1.17.2

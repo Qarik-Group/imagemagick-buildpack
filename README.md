@@ -31,6 +31,7 @@ Delegates (built-in): bzlib djvu fontconfig freetype jbig jng jpeg lcms lqr lzma
 Some language bindings do not yet support ImageMagick v7, such as:
 
 * Ruby [`rmagick`](https://github.com/rmagick/rmagick) - [estimated support for ImageMagick7 Summer 2019](https://github.com/rmagick/rmagick/issues/256)
+* Ruby [`minimagick`](https://github.com/minimagick/minimagick) - accidentally discovers legacy ImageMagick6; [waiting on PR](https://github.com/minimagick/minimagick/pull/478)
 
 ## Updates via CI
 

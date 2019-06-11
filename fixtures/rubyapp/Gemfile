@@ -1,0 +1,5 @@
+source "http://rubygems.org"
+
+gem "sinatra"
+gem "mini_magick", git: 'https://github.com/drnic/minimagick.git', branch: 'prioritize-imagemagick7'
+
