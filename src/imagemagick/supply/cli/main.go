@@ -1,8 +1,8 @@
 package main
 
 import (
-	_ "imagemagick/hooks"
-	"imagemagick/supply"
+	_ "github.com/starkandwayne/imagemagick-buildpack/src/imagemagick/hooks"
+	"github.com/starkandwayne/imagemagick-buildpack/src/imagemagick/supply"
 	"os"
 	"path/filepath"
 	"time"
