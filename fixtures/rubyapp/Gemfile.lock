@@ -1,9 +1,8 @@
 GIT
-  remote: https://github.com/drnic/minimagick
-  revision: da1e5122bdafbfa0d3717f9ada546698f96b4d1f
-  branch: prioritize-imagemagick7
+  remote: https://github.com/minimagick/minimagick
+  revision: 916b89589a4486ba6d1d417b495a2affe0d08a7a
   specs:
-    mini_magick (4.9.3)
+    mini_magick (4.9.5)
 
 GEM
   remote: http://rubygems.org/
