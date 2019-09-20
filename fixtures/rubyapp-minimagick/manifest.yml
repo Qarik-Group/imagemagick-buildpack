@@ -5,5 +5,5 @@ applications:
   disk_quota: 512M
   stack: cflinuxfs3
   buildpacks:
-  - imagemagick_buildpack
+  - https://github.com/starkandwayne/imagemagick-buildpack
   - ruby_buildpack

@@ -1,0 +1,6 @@
+source "http://rubygems.org"
+
+gem "sinatra"
+# https://github.com/rmagick/rmagick/issues/256
+gem "rmagick", "4.1.0.rc2"
+

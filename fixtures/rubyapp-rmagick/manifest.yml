@@ -1,0 +1,9 @@
+applications:
+- name: rmagick-app
+  instances: 1
+  memory: 256M
+  disk_quota: 512M
+  stack: cflinuxfs3
+  buildpacks:
+  - https://github.com/starkandwayne/imagemagick-buildpack
+  - ruby_buildpack
