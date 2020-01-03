@@ -17,6 +17,6 @@ dependencies:
 - name: ImageMagick
   version: 7.0.9-13
   uri: https://imagemagick-buildpack.s3.us-east-2.amazonaws.com/blobs/ImageMagick/ImageMagick-compiled-7.0.9-13.tgz
-  sha256: bb5d3506c5e247d2962c8e98ec0e394d562ec0415b110b4e7ac01a3b663a65df
+  sha256: a35c5fc1036bf29d87a00492a3e2cc501857df0a0282ccdf720ed5040668a7a9
   cf_stacks:
   - cflinuxfs3
