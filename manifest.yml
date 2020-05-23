@@ -2,7 +2,7 @@
 language: imagemagick
 default_versions:
 - name: ImageMagick
-  version: 7.0.10-13
+  version: 7.0.10-14
 dependency_deprecation_dates: []
 
 include_files:
@@ -15,8 +15,8 @@ pre_package: scripts/build.sh
 
 dependencies:
 - name: ImageMagick
-  version: 7.0.10-13
-  uri: https://imagemagick-buildpack.s3.us-east-2.amazonaws.com/blobs/ImageMagick/ImageMagick-compiled-7.0.10-13.tgz
-  sha256: c32a60ad64fe1a6e76b501d45b044d827000018aff390a6453522539fd57f3c5
+  version: 7.0.10-14
+  uri: https://imagemagick-buildpack.s3.us-east-2.amazonaws.com/blobs/ImageMagick/ImageMagick-compiled-7.0.10-14.tgz
+  sha256: 95442c3febaf069b7187cc99c52ae25bc839f460c2747404011ddb447fba2abd
   cf_stacks:
   - cflinuxfs3
